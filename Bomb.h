@@ -7,6 +7,8 @@ class Bomb: public GameObject {
 public:
     virtual ~Bomb();
     virtual void influencePlayer(Player& player);
+    virtual ~Bomb(){};
+
 };
 
 #endif // BOMB_H
