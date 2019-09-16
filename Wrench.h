@@ -12,7 +12,9 @@ class Wrench : public GameObject{
 private:
 	const int ADD_TO_HEALTH = 1;
 public:
+    virtual ~Wrench();
 	virtual void influencePlayer(Player&);
+    
 };
 
 
