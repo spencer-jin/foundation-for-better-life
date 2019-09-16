@@ -2,6 +2,6 @@
 #include "Player.h"
 
 
-void Bomb::InfluencePlayer(Player &player) {
+void Bomb::influencePlayer(Player &player) {
     player.setHealth(player.getHealth()-3);
 }
