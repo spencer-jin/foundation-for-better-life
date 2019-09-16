@@ -5,7 +5,7 @@
 
 class Gas: public GameObject {
 public:
-    virtual void InfluencePlayer(Player& player); //adds gas +1
+    virtual void influencePlayer(Player& player); //adds gas +1
 }
 
 
