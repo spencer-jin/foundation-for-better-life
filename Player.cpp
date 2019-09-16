@@ -37,6 +37,9 @@ void Player::setHealth(int h)
     
     if(m_health <= 0)
         m_isDead = true;
+    
+    if(m_health > 25)
+        m_health = 25;
 }
 
 void Player::setGas(int g)
@@ -45,6 +48,9 @@ void Player::setGas(int g)
     
     if(m_gas <= 0)
         m_isDead = true;
+    
+    if(m_gas > 25)
+        m_gas = 25;
 }
 
 void Player::setDrunkState(bool d)
