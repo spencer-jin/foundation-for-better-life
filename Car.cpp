@@ -5,6 +5,6 @@
 #include "Car.h"
 #include "Player.h"
 
-virtual void Car::influencePlayer(Player &player) {
-    player.setHealth(-2);
+void Car::influencePlayer(Player &player) {
+    player.setHealth(player.getHealth()-2);
 }

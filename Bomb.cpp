@@ -2,6 +2,6 @@
 #include "Player.h"
 
 
-virtual void Bomb::InfluencePlayer(Player &player) {
-    player.setDrunkState(-3);
+void Bomb::influencePlayer(Player &player) {
+    player.setHealth(player.getHealth()-3);
 }

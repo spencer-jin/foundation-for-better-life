@@ -8,7 +8,7 @@
 
 class Wrench : public GameObject{
 private:
-	const int addHealth = 1;
+	const int ADD_TO_HEALTH = 1;
 public:
 	virtual void influencePlayer(Player&);
 };
