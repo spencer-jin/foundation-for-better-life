@@ -14,12 +14,6 @@ private:
 public:
     virtual ~Wrench();
 	virtual void influencePlayer(Player&);
-<<<<<<< HEAD
-    
-=======
-	virtual ~Wrench() {};
->>>>>>> 0b819483682efb491142a62340dd2e2b6b08ab11
 };
-
 
 #endif //FOUNDATION_FOR_BETTER_LIFE_WRENCH_H
