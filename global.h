@@ -1,1 +1,0 @@
-const int MAX_HEALTH_LIMIT = 25;
