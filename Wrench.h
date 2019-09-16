@@ -13,6 +13,7 @@ private:
 	const int ADD_TO_HEALTH = 1;
 public:
 	virtual void influencePlayer(Player&);
+	virtual ~Wrench() {};
 };
 
 

@@ -5,6 +5,7 @@
 
 class Alcohol : public GameObject {
 public:
+	virtual ~Alcohol() {};
     virtual void influencePlayer(Player &player); //sets player status as drunk
 }
 
