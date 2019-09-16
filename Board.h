@@ -9,12 +9,16 @@
 
 class Board { 
 public:
-std::list<std::list<GameObject>> lanes;
-GameObjectGenerator gameObjectGenerator; 
-Player player; 
-
+    void drawBoard();
+    void update();
+    bool checkStatus();
 
 private: 
+    std::list<std::list<GameObject>> m_lanes;
+    GameObjectGenerator m_gameObjectGenerator; 
+    Player m_player; 
+    int m_playerPosition; 
+    int m_score;
 
 };
 
