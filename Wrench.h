@@ -6,7 +6,7 @@
 #define FOUNDATION_FOR_BETTER_LIFE_WRENCH_H
 
 
-class Wrench {
+class Wrench : public GameObject{
 private:
 	const int addHealth = 1;
 public:
