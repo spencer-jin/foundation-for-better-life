@@ -7,7 +7,10 @@
 
 
 class Wrench {
-
+private:
+	const int addHealth = 1;
+public:
+	virtual void influencePlayer(Player&);
 };
 
 
