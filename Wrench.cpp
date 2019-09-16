@@ -10,5 +10,5 @@ void Wrench::influencePlayer(Player& p) {
 	if (p.getHealth() >= MAX_HEALTH_LIMIT)
 		return;
 	// else
-	p.setHealth(p.getHealth() + addHealth); // add health to the current HP
+	p.setHealth(p.getHealth() + ADD_TO_HEALTH); // add health to the current HP
 }
