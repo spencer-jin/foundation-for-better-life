@@ -32,8 +32,8 @@ void GameObjectGenerator::feedItem(std::vector<std::vector<GameObject*> >& lanes
 
 }
 
-
 std::string GameObjectGenerator::getLineFromFile() {
+
     if(!input.is_open()){
         std::cout  <<"File cannot be opened.";
         exit (10);
@@ -55,3 +55,4 @@ std::string GameObjectGenerator::getLineFromFile() {
     
     
 }
+
