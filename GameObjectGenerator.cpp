@@ -23,7 +23,6 @@ void GameObjectGenerator::feedItem(std::vector<std::vector<GameObject*> >& lanes
 
 }
 
-
 std::string GameObjectGenerator::getLineFromFile() {
-    
+
 }
