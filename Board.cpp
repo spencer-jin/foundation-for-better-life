@@ -2,7 +2,7 @@
 
 
 Board::Board() {
-
+    //m_gameObjectGenerator();
 }
 
 Board::~Board() {
@@ -26,7 +26,7 @@ void Board::update() {
     if (m_distance == 100 || m_distance == 200)
         m_level++;
     m_score += m_level;
-    m_gameObjectGenerator.feedItem(&m_lanes); // change the implementation to passing a pointer to the m_lanes
+    m_gameObjectGenerator.feedItem(m_lanes); // change the implementation to passing a pointer to the m_lanes
 }
 
 bool Board::checkStatus() {
