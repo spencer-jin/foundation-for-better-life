@@ -6,6 +6,7 @@
 class GameObjectGenerator { 
 public:
     GameObjectGenerator();
+    ~GameObjectGenerator();
     void feedItem(std::vector<std::vector<GameObject*> >& lanes);
     std::string getLineFromFile();
     
