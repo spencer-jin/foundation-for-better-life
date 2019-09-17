@@ -1,5 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include <SFML/Graphics.hpp>
 
 class Player
 {
@@ -14,7 +15,7 @@ public:
     void setGas(int gas);           // checks to see if player is dead as well
     void setDrunkState(bool drunk);
     
-    virtual void draw(int x_pos);
+	virtual void draw(int position, sf::RenderWindow&);
     
 private:
     int m_gas;

@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <SFML/Graphics.hpp>
 
 Player::Player()
 {
@@ -58,7 +59,14 @@ void Player::setDrunkState(bool d)
     m_drunkState = d;
 }
 
-void Player::draw(int x_pos)
-{
-    // TO BE IMPLEMENTED
+void Player::draw(int position,sf::RenderWindow& window) {
+	sf::RectangleShape player(sf::Vector2f(100, 125));
+	player.setPosition(position*100, 750);
+	sf::Texture playerTexture;
+	playerTexture.loadFromFile("player.png");
+	player.setTexture(&playerTexture);
+	while (window.isOpen())
+	{
+		window.draw(player);
+	}
 }
