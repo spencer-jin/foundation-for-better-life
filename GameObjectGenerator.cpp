@@ -1,5 +1,14 @@
 #include "GameObjectGenerator.h"
 #include <vector>
+#include <fstream>
+#include <iostream>
+
+
+GameObjectGenerator::GameObjectGenerator()
+{
+    input.open("map.txt");
+    
+}
 
 void GameObjectGenerator::feedItem(std::vector<std::vector<GameObject*> >& lanes) {
     //only possible combination can be fed into the lanes
@@ -25,4 +34,25 @@ void GameObjectGenerator::feedItem(std::vector<std::vector<GameObject*> >& lanes
 
 std::string GameObjectGenerator::getLineFromFile() {
 
+    if(!input.is_open()){
+        std::cout  <<"File cannot be opened.";
+        exit (10);
+    }
+    
+    std::string line;
+    
+    if(input.eof())
+    {
+        input.open("map.txt");
+        getline(input, line);
+        return line;
+        
+    }else{
+        getline(input, line);
+        return line;
+    }
+    
+    
+    
 }
+
