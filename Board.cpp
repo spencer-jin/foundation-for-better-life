@@ -10,7 +10,9 @@ Board::~Board() {
 }
 
 void Board::drawBoard() {
-
+// each GameObject item needs a draw() function
+// that will tell the board how to draw the item
+// Player class also needs a draw function
 }
 
 void Board::update() {
