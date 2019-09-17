@@ -1,7 +1,7 @@
 #include "GameObjectGenerator.h"
 #include <vector>
 
-void feedItem(std::vector<std::vector<GameObject*> >& lanes) {
+void GameObjectGenerator::feedItem(std::vector<std::vector<GameObject*> >& lanes) {
     //only possible combination can be fed into the lanes
     //create a file with possible set of items, use file io to feed into the lanes 
     /*
@@ -16,14 +16,14 @@ void feedItem(std::vector<std::vector<GameObject*> >& lanes) {
         create 40 lines and loop them forever
         
     */
-   char c = getCharacterFromFile();
-   switch (c) {
-       case 'v':
-
-   }
+   std::string s = getLineFromFile();
+   char a = s.at(0);
+   char b = s.at(1);
+   char c = s.at(2);
 
 }
 
-char getCharacterFromFile() {
 
+std::string GameObjectGenerator::getLineFromFile() {
+    
 }
