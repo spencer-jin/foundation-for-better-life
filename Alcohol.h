@@ -10,7 +10,7 @@ public:
 
     virtual void influencePlayer(Player &player); //sets player status as drunk
 
-    virtual void draw();
+    virtual void draw(int x_pos, int y_pos);
 };
 
 #endif // ALCOHOL_H
