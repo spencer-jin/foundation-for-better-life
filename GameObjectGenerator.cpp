@@ -59,6 +59,7 @@ void GameObjectGenerator::feedItem(std::deque<std::deque<std::shared_ptr<GameObj
             break;
         case 'c':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Cone()) );
             break;
+        default: break;
     }
     
     switch(lane2)
@@ -77,6 +78,7 @@ void GameObjectGenerator::feedItem(std::deque<std::deque<std::shared_ptr<GameObj
             break;
         case 'c':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Cone()) );
             break;
+        default: break;
     }
     
     
@@ -96,6 +98,7 @@ void GameObjectGenerator::feedItem(std::deque<std::deque<std::shared_ptr<GameObj
             break;
         case 'c':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Cone()) );
             break;
+        default: break;
     }
     
     
