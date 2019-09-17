@@ -57,3 +57,8 @@ void Player::setDrunkState(bool d)
 {
     m_drunkState = d;
 }
+
+void Player::draw(int x_pos)
+{
+    // TO BE IMPLEMENTED
+}

@@ -13,4 +13,5 @@ public:
     
 private:
     std::ifstream input;
+    
 };

@@ -7,3 +7,7 @@ GameObject::~GameObject(){}
 void GameObject::influencePlayer(Player &p) {
 	return;
 }
+
+void GameObject::draw(){
+    //do nothing
+}

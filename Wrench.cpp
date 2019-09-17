@@ -9,3 +9,8 @@
 void Wrench::influencePlayer(Player& p) {
 	p.setHealth(p.getHealth() + ADD_TO_HEALTH); // add health to the current HP
 }
+
+void draw(int x_pos, int y_pos)
+{
+    // TO BE IMPLEMENTED
+}
