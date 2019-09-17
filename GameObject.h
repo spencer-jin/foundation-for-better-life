@@ -3,6 +3,7 @@
 
 #include "Player.h"
 #include <SFML/Graphics.hpp>
+
 class GameObject {
 public:
 	virtual ~GameObject(); // destructor
