@@ -14,7 +14,7 @@ public:
     void setGas(int gas);           // checks to see if player is dead as well
     void setDrunkState(bool drunk);
     
-    
+    void draw();
     
 private:
     int m_gas;
