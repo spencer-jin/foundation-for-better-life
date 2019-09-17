@@ -16,7 +16,7 @@ void Board::drawBoard() {
 }
 
 void Board::update() {
-    GameObject* obj = nullptr;
+    std::shared_ptr<GameObject> obj = nullptr;
     for (int i = 0; i < 3; i++) {
         obj = m_lanes[m_playerPosition].back();
         m_lanes[i].pop_back();
@@ -45,7 +45,7 @@ int Board::getDistance() const {
     return m_distance;
 }
 
-const std::vector<std::vector<GameObject*> >& Board::getLanes() const { 
+const std::deque<std::deque<std::shared_ptr<GameObject > > >& Board::getLanes() const {
     return m_lanes;
 }
 
