@@ -10,3 +10,10 @@ public:
     virtual void draw(int x_pos, int y_pos);
 };
 #endif // CONE_H
+
+
+
+
+
+
+

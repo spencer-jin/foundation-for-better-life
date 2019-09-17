@@ -7,4 +7,4 @@
 
 void Car::influencePlayer(Player &player) {
     player.setHealth(player.getHealth()-2);
-}
+} 
