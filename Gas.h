@@ -7,7 +7,8 @@ class Gas : public GameObject {
 public:
     virtual void influencePlayer(Player& player); //adds gas + 3
     virtual ~Gas();
-    //virtual void draw();
+    virtual void draw(int x_pos, int y_pos);
+
     
 private:
     const int ADD_TO_GAS = 3;

@@ -14,7 +14,7 @@ private:
 public:
     virtual ~Wrench();
 	virtual void influencePlayer(Player&);
-	virtual void draw();
+	virtual void draw(int x_pos, int y_pos);
 };
 
 #endif //FOUNDATION_FOR_BETTER_LIFE_WRENCH_H

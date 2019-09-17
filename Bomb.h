@@ -7,7 +7,7 @@ class Bomb: public GameObject {
 public:
     virtual ~Bomb();
     virtual void influencePlayer(Player& player);
-    virtual void draw();
+    virtual void draw(int x_pos, int y_pos);
 
 };
 

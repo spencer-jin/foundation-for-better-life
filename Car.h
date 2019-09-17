@@ -11,7 +11,7 @@ class Car :public GameObject{
 public:
     virtual void influencePlayer(Player&); // decreases player’s health by -2
     virtual ~Car(){};
-    virtual void draw();
+    virtual void draw(int x_pos, int y_pos);
 };
 
 

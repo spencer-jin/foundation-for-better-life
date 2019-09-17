@@ -7,6 +7,6 @@ class Cone : public GameObject {
 public:
     virtual ~Cone();
     virtual void influencePlayer(Player& player); // decreases player health -1
-    virtual void draw();
+    virtual void draw(int x_pos, int y_pos);
 };
 #endif // CONE_H
