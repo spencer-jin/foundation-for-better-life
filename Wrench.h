@@ -7,6 +7,7 @@
 
 #include "Player.h"
 #include "GameObject.h"
+#include <SFML/Graphics.hpp>
 
 class Wrench : public GameObject{
 private:
@@ -14,7 +15,7 @@ private:
 public:
     virtual ~Wrench();
 	virtual void influencePlayer(Player&);
-	virtual void draw(int x_pos, int y_pos);
+	virtual void draw(int x_pos, int y_pos, sf::RenderWindow&);
 };
 
 #endif //FOUNDATION_FOR_BETTER_LIFE_WRENCH_H

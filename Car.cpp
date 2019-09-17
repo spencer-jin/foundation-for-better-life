@@ -4,7 +4,19 @@
 
 #include "Car.h"
 #include "Player.h"
+#include <SFML/Graphics.hpp>
 
 void Car::influencePlayer(Player &player) {
     player.setHealth(player.getHealth()-2);
+}
+void Car::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
+	sf::RectangleShape car(sf::Vector2f(X_LENGTH_RATIO, Y_LENGTH_RATIO));
+	car.setPosition(x_pos * X_LENGTH_RATIO, y_pos * Y_LENGTH_RATIO);
+	sf::Texture carTexture;
+	carTexture.loadFromFile("car.png");
+	car.setTexture(&carTexture);
+	while (window.isOpen())
+	{
+		window.draw(car);
+	}
 }
