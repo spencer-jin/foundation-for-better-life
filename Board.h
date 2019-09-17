@@ -1,7 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector> 
+#include <deque>
+#include <deque>
 #include <iterator> 
 #include "GameObjectGenerator.h"
 #include "Player.h"
@@ -17,10 +18,10 @@ public:
     int getPlayerPosition() const;
     int getScore () const;
     int getDistance () const;
-    const std::vector<std::vector<GameObject*> >& getLanes() const;
+    const std::deque<std::deque<std::shared_ptr<GameObject > > >& getLanes() const;
     void setPlayerPosition(int pos);
 private: 
-    std::vector<std::vector<GameObject*> > m_lanes; //should keep the pointer to the lanes, not the lane itself. Make sure to deallocte.
+    std::deque<std::deque<std::shared_ptr<GameObject > > > m_lanes; //should keep the pointer to the lanes, not the lane itself. Make sure to deallocte.
     GameObjectGenerator m_gameObjectGenerator; //Also change the gameobject* to gameobject smartpointer
     Player m_player; 
     int m_playerPosition; 
