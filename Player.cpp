@@ -59,6 +59,10 @@ void Player::setDrunkState(bool d)
     m_drunkState = d;
 }
 
+bool Player::hasGas() {
+    return m_gas > 0;
+}
+
 void Player::draw(int position,sf::RenderWindow& window) {
 	sf::RectangleShape player(sf::Vector2f(100, 125));
 	player.setPosition(position*100, 750);
