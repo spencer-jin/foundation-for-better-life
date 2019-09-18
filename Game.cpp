@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "utilities.h"
 #include <iostream>
+#include <windows.h> 
 
 void Game::play() {
     bool playerDead = false; 
@@ -51,6 +52,8 @@ void Game::play() {
             playerDrunk = true;
 
 		//delay time 
+		if (board.checkStatus() != "Player Drunk")
+			Sleep(200);
     }
 
     gameOver();
