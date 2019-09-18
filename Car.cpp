@@ -25,4 +25,3 @@ void Car::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 		window.draw(car);
 	}
 }
-

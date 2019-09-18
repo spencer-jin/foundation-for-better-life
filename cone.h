@@ -11,3 +11,10 @@ public:
     virtual void draw(int x_pos, int y_pos, sf::RenderWindow&);
 };
 #endif // CONE_H
+
+
+
+
+
+
+
