@@ -15,7 +15,6 @@ public:
     void drawBoard();
     void update();
     std::string checkStatus();
-    void setPlayerPosition(int pos);
     void setPlayerStatus(bool drunk);
     int getPlayerPosition() const;
     int getScore () const;
