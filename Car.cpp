@@ -20,8 +20,5 @@ void Car::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 	sf::Texture carTexture;
 	carTexture.loadFromFile("car.png");
 	car.setTexture(&carTexture);
-	while (window.isOpen())
-	{
 		window.draw(car);
-	}
 }

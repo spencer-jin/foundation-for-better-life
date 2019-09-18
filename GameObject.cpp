@@ -9,10 +9,10 @@ void GameObject::influencePlayer(Player &p) {
 }
 
 void GameObject::draw(int xPos, int yPos, sf::RenderWindow &window) {
+	/*
 	sf::RectangleShape blankSpace(sf::Vector2f(X_LENGTH_RATIO, Y_LENGTH_RATIO));
 	blankSpace.setPosition(xPos * X_LENGTH_RATIO, yPos * Y_LENGTH_RATIO);
-	while (window.isOpen())
-	{
-		window.draw(blankSpace);
-	}
+	
+	window.draw(blankSpace);
+	*/
 }

@@ -13,8 +13,5 @@ void Bomb::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 	sf::Texture bombTexture;
 	bombTexture.loadFromFile("bomb.png");
 	bomb.setTexture(&bombTexture);
-	while (window.isOpen())
-	{
 		window.draw(bomb);
-	}
 }

@@ -73,8 +73,7 @@ void Player::draw(int position,sf::RenderWindow& window) {
 	else
 		playerTexture.loadFromFile("player-sober.png");
 	player.setTexture(&playerTexture);
-	while (window.isOpen())
-	{
-		window.draw(player);
-	}
+
+	window.draw(player);
+
 }
