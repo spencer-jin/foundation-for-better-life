@@ -1,6 +1,8 @@
 #include "Board.h"
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <unistd.h>
 
 Board::Board() {
 	// create window to use for graphics
@@ -64,10 +66,14 @@ void Board::update() {
 std::string Board::checkStatus() {
     if(m_player.isDead())
         return "Player Dead";
-	if (m_player.isDrunk())
-		return "Player Drunk";
-	else
-		return "okay";
+    if(!m_player.hasGas())
+        return "Player has no Gas";
+    if(m_player.isDrunk())
+        return "Player Drunk";
+    else
+        return "okay";
+    
+
 }
 
 void Board::setPlayerPosition(int pos) {
@@ -75,7 +81,15 @@ void Board::setPlayerPosition(int pos) {
 }
 
 void Board::gameOver() {
-    // display game Over;
+    m_window.clear();
+    sf::RectangleShape kenta(sf::Vector2f(750,750));
+    kenta.setPosition(0,0);
+    sf::Texture kentaTexture;
+    kentaTexture.loadFromFile("ripKenta.jpeg");
+    kenta.setTexture(&kentaTexture);
+    m_window.draw(kenta);
+    
+    usleep(30000000);
 }
 
 void Board::setPlayerStatus(bool drunk) {

@@ -10,7 +10,8 @@ public:
     int getGas();
     bool isDrunk();         // returns True when player is drunk
     bool isDead();          // checks m_gas and m_health before returning
-    
+    bool hasGas();
+
     void setHealth(int health);     // checks to see if player is dead as well
     void setGas(int gas);           // checks to see if player is dead as well
     void setDrunkState(bool drunk);

@@ -59,6 +59,10 @@ void Player::setDrunkState(bool d)
     m_drunkState = d;
 }
 
+bool Player::hasGas() {
+    return m_gas > 0;
+}
+
 void Player::draw(int position,sf::RenderWindow& window) {
 	
 
