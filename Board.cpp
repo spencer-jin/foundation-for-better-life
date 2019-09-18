@@ -1,8 +1,8 @@
 #include "Board.h"
-
+#include <time.h>
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <unistd.h>
+#include <windows.h> // for Sleep function
 
 Board::Board() {
 	// create window to use for graphics
@@ -88,8 +88,8 @@ void Board::gameOver() {
     kentaTexture.loadFromFile("ripKenta.jpeg");
     kenta.setTexture(&kentaTexture);
     m_window.draw(kenta);
-    
-    usleep(30000000);
+	m_window.display();
+	Sleep(5000);
 }
 
 void Board::setPlayerStatus(bool drunk) {
@@ -110,8 +110,4 @@ int Board::getDistance() const {
 
 const std::deque<std::deque<std::shared_ptr<GameObject > > >& Board::getLanes() const {
     return m_lanes;
-}
-
-void Board::drawBackground() {
-	
 }

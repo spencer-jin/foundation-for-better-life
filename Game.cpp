@@ -52,6 +52,7 @@ void Game::play() {
 
 		//delay time 
     }
+
     gameOver();
 
 }
