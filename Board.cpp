@@ -2,7 +2,8 @@
 
 
 Board::Board() {
-    //m_gameObjectGenerator();
+	// create window to use for graphics
+	m_window.create(sf::VideoMode(600, 875), "Drunk Driver", sf::Style::Close | sf::Style::Resize);
 }
 
 Board::~Board() {
@@ -12,10 +13,10 @@ Board::~Board() {
 void Board::drawBoard() {
     for (int i = 0; i < m_lanes.size(); i++) {
         for (int j = 0; j < m_lanes[0].size(); i++) {
-            m_lanes[i][j]->draw(i,j,m_windows);
+            m_lanes[i][j]->draw(i,j,m_window);
         }
     }
-    m_player->draw(m_playerPosition);
+    m_player.draw(m_playerPosition, m_window);
 // each GameObject item needs a draw() function
 // that will tell the board how to draw the item
 // Player class also needs a draw function

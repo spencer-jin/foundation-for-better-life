@@ -2,7 +2,6 @@
 #define BOARD_H
 
 #include <deque>
-#include <deque>
 #include <iterator> 
 #include "GameObjectGenerator.h"
 #include "Player.h"
@@ -28,6 +27,7 @@ private:
     int m_score;
     int m_distance;
     int m_level;
+	sf::RenderWindow m_window;
 };
 
 #endif //BOARD_H
