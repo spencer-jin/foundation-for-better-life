@@ -104,11 +104,12 @@ void Board::setPlayerPosition(int pos) {
 }
 
 void Board::gameOver() {
-    sf::RectangleShape kenta(sf::Vector2f(750,750));
-    kenta.setPosition(0,0);
+    sf::RectangleShape kenta(sf::Vector2f(600,750));
+    //kenta.setPosition(0,0);
     sf::Texture kentaTexture;
     kentaTexture.loadFromFile("ripKenta.jpeg");
     kenta.setTexture(&kentaTexture);
+	//kenta.setRotation(90);
     m_window.draw(kenta);
 	m_window.display();
 	Sleep(5000);

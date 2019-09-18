@@ -8,7 +8,6 @@ void Game::play() {
     bool playerDrunk = false;
     int drunkCounter = 0;
     char key;
-     
     while (!playerDead) {
         board.drawBoard();
 
@@ -53,7 +52,7 @@ void Game::play() {
 
 		//delay time 
 		if (board.checkStatus() != "Player Drunk")
-			Sleep(200);
+			Sleep(300);
     }
 
     gameOver();
