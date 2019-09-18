@@ -14,8 +14,5 @@ void Cone::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 	sf::Texture coneTexture;
 	coneTexture.loadFromFile("cone.png");
 	cone.setTexture(&coneTexture);
-	while (window.isOpen())
-	{
 		window.draw(cone);
-	}
 }

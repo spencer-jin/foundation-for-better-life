@@ -14,8 +14,5 @@ void Gas::influencePlayer(Player &player) {
 	sf::Texture gasTexture;
 	gasTexture.loadFromFile("gas.png");
 	gas.setTexture(&gasTexture);
-	while (window.isOpen())
-	{
 		window.draw(gas);
-	}
 }

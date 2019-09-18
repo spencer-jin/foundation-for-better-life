@@ -22,14 +22,32 @@ void Game::play() {
             }
             drunkCounter++;
         }
-        key = getCharacter();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+		{
+			if (board.getPlayerPosition() <= 0)
+			{
+			}
+			else if (board.getPlayerPosition() <= 1) // case: car in second lane
+				board.setPlayerPosition(0);
+			else if (board.getPlayerPosition() <= 2) // case: car in third lane
+				board.setPlayerPosition(1);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+		{
+			if (board.getPlayerPosition() >= 2) // case: car in third lane
+			{
+			}
+			else if (board.getPlayerPosition() >= 1) // case: car in second lane
+				board.setPlayerPosition(2);
+			else if (board.getPlayerPosition() >= 0) // case: car in first lane
+				board.setPlayerPosition(0);
+		}
         board.update();
         if (board.checkStatus() == "Player Dead")
             playerDead = true; 
         if (board.checkStatus() == "Player Drunk")
             playerDrunk = true; 
     }
-
     gameOver();
 
 }

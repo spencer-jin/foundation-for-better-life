@@ -20,9 +20,6 @@ void Wrench::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 	sf::Texture wrenchTexture;
 	wrenchTexture.loadFromFile("wrench.png");
 	wrench.setTexture(&wrenchTexture);
-	while (window.isOpen())
-	{
 		window.draw(wrench);
-	}
 }
 

@@ -6,6 +6,9 @@
 #include "GameObjectGenerator.h"
 #include "Player.h"
 #include "GameObject.h"
+#include "Alcohol.h"
+#include "Car.h"
+#include "Bomb.h"
 
 class Board { 
 public:

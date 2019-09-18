@@ -17,9 +17,7 @@ void Alcohol::draw(int x_pos, int y_pos, sf::RenderWindow& window) {
 	sf::Texture alcoholTexture;
 	alcoholTexture.loadFromFile("alcohol.png");
 	alcohol.setTexture(&alcoholTexture);
-	while (window.isOpen())
-	{
-		window.draw(alcohol);
-	}
+	window.draw(alcohol);
+
 }
 

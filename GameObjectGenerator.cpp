@@ -64,19 +64,19 @@ void GameObjectGenerator::feedItem(std::deque<std::deque<std::shared_ptr<GameObj
     
     switch(lane2)
     {
-        case 'v': lanes.at(0).push_front( std::shared_ptr<GameObject> (new GameObject()) );
+        case 'v': lanes.at(1).push_front( std::shared_ptr<GameObject> (new GameObject()) );
             break;
-        case 'w': lanes.at(0).push_front( std::shared_ptr<GameObject> (new Wrench()) );
+        case 'w': lanes.at(1).push_front( std::shared_ptr<GameObject> (new Wrench()) );
             break;
-        case 'g':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Gas()) );
+        case 'g':  lanes.at(1).push_front( std::shared_ptr<GameObject> (new Gas()) );
             break;
-        case 'a':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Alcohol()) );
+        case 'a':  lanes.at(1).push_front( std::shared_ptr<GameObject> (new Alcohol()) );
             break;
-        case 'b':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Bomb()) );
+        case 'b':  lanes.at(1).push_front( std::shared_ptr<GameObject> (new Bomb()) );
             break;
-        case 'C':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Car()) );
+        case 'C':  lanes.at(1).push_front( std::shared_ptr<GameObject> (new Car()) );
             break;
-        case 'c':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Cone()) );
+        case 'c':  lanes.at(1).push_front( std::shared_ptr<GameObject> (new Cone()) );
             break;
         default: break;
     }
@@ -84,19 +84,19 @@ void GameObjectGenerator::feedItem(std::deque<std::deque<std::shared_ptr<GameObj
     
     switch(lane3)
     {
-        case 'v': lanes.at(0).push_front( std::shared_ptr<GameObject> (new GameObject()) );
+        case 'v': lanes.at(2).push_front( std::shared_ptr<GameObject> (new GameObject()) );
             break;
-        case 'w': lanes.at(0).push_front( std::shared_ptr<GameObject> (new Wrench()) );
+        case 'w': lanes.at(2).push_front( std::shared_ptr<GameObject> (new Wrench()) );
             break;
-        case 'g':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Gas()) );
+        case 'g':  lanes.at(2).push_front( std::shared_ptr<GameObject> (new Gas()) );
             break;
-        case 'a':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Alcohol()) );
+        case 'a':  lanes.at(2).push_front( std::shared_ptr<GameObject> (new Alcohol()) );
             break;
-        case 'b':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Bomb()) );
+        case 'b':  lanes.at(2).push_front( std::shared_ptr<GameObject> (new Bomb()) );
             break;
-        case 'C':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Car()) );
+        case 'C':  lanes.at(2).push_front( std::shared_ptr<GameObject> (new Car()) );
             break;
-        case 'c':  lanes.at(0).push_front( std::shared_ptr<GameObject> (new Cone()) );
+        case 'c':  lanes.at(2).push_front( std::shared_ptr<GameObject> (new Cone()) );
             break;
         default: break;
     }
@@ -116,7 +116,7 @@ std::string GameObjectGenerator::getLineFromFile() {
     std::string line;
     
     if( input.eof() ) {
-        input.std::__1::ios_base::clear();
+        input.std::ios_base::clear();
         input.seekg(0, std::ios::beg);
     }
     

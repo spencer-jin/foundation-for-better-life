@@ -19,26 +19,15 @@ bool trueWithProbability(double p)
 
 #ifdef _MSC_VER  //  Microsoft Visual C++
 
+#include <iostream>
 #include <windows.h>
 #include <conio.h>
 
 char getCharacter()
 {
-    int c = _getch();
-    if (c != 0xE0  &&  c != 0x00)  // first of the two sent by arrow keys
-        return c;
-    else
-    {
-        c = _getch();
-        switch (c)
-        {
-          case 'K':  return ARROW_LEFT;
-          case 'M':  return ARROW_RIGHT;
-          case 'H':  return ARROW_UP;
-          case 'P':  return ARROW_DOWN;
-          default:   return '?';
-        }
-    }
+	char c; 
+	std::cin >> c;
+	return c;
 }
 
 void clearScreen()
