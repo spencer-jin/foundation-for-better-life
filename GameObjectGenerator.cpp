@@ -116,8 +116,10 @@ std::string GameObjectGenerator::getLineFromFile() {
     std::string line;
     
     if( input.eof() ) {
-        input.std::ios_base::clear();
-        input.seekg(0, std::ios::beg);
+       /* input.std::ios_base::clear();
+        input.seekg(0, std::ios::beg);*/
+		input.close();
+		input.open("map.txt");
     }
     
     getline(input, line);

@@ -23,7 +23,6 @@ Board::~Board() {
 
 void Board::drawBoard() {
 	m_window.clear();
-	
 	// create background
 	sf::RectangleShape background(sf::Vector2f(600, 875)); 
 	sf::Texture backgroundTexture;
@@ -37,13 +36,41 @@ void Board::drawBoard() {
 			m_lanes[i][j]->draw(i, j, m_window);
 		}
 	}
-
-	
-	
 	m_player.draw(m_playerPosition, m_window);
 	// each GameObject item needs a draw() function
 	// that will tell the board how to draw the item
 	// Player class also needs a draw function
+	sf::Font font;
+	if (!font.loadFromFile("Arbutus-Regular.ttf"))
+		exit(10);
+	//score
+	sf::Text score("Score: " + std::to_string(getScore()), font, 30);
+	score.setPosition(330, 5);
+	m_window.draw(score);
+	//hp
+	sf::Text hp("HP: " + std::to_string(m_player.getHealth()), font, 30); 
+	hp.setPosition(330, 45);
+	m_window.draw(hp);
+
+	//distance 
+	sf::Text distance("Distance: " + std::to_string(getDistance()), font, 30);
+	distance.setPosition(330, 85);
+	m_window.draw(distance);
+	//gas 
+	sf::Text gas("Gas: " + std::to_string(m_player.getGas()), font, 30); 
+	gas.setPosition(330, 125);
+	m_window.draw(gas);
+	//Drunk / not drunk 
+	std::string drunkStage;
+	if (m_player.isDrunk() == true)
+		drunkStage = "Drunk";
+	else
+		drunkStage = "Sober";
+	sf::Text drunk(drunkStage, font, 30); // should be get isDrunkStage from player
+	drunk.setPosition(330, 165);
+	m_window.draw(drunk);
+
+
 	m_window.display();
 
 }
@@ -72,8 +99,6 @@ std::string Board::checkStatus() {
         return "Player Drunk";
     else
         return "okay";
-    
-
 }
 
 void Board::setPlayerPosition(int pos) {
@@ -81,7 +106,6 @@ void Board::setPlayerPosition(int pos) {
 }
 
 void Board::gameOver() {
-    m_window.clear();
     sf::RectangleShape kenta(sf::Vector2f(750,750));
     kenta.setPosition(0,0);
     sf::Texture kentaTexture;
