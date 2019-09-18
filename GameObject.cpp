@@ -15,4 +15,5 @@ void GameObject::draw(int xPos, int yPos, sf::RenderWindow &window) {
 	
 	window.draw(blankSpace);
 	*/
+	
 }

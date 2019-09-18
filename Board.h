@@ -16,6 +16,7 @@ public:
     ~Board();
     void gameOver();
     void drawBoard();
+	void drawBackground();
     void update();
     std::string checkStatus();
     void setPlayerStatus(bool drunk);

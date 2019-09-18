@@ -64,12 +64,14 @@ bool Player::hasGas() {
 }
 
 void Player::draw(int position,sf::RenderWindow& window) {
+	
+
 	sf::RectangleShape player(sf::Vector2f(100, 125));
 	player.setPosition(position*100, 750);
 	sf::Texture playerTexture;
 	// draw player according to drunk state
 	if(m_drunkState == true)
-		playerTexture.loadFromFile("player-drunk.png");
+		playerTexture.loadFromFile("player-drunk.jpeg");
 	else
 		playerTexture.loadFromFile("player-sober.png");
 	player.setTexture(&playerTexture);

@@ -123,8 +123,5 @@ std::string GameObjectGenerator::getLineFromFile() {
     getline(input, line);
     return line;
     
-    
-    
-    
 }
 

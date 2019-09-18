@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "utilities.h"
+#include <iostream>
 
 void Game::play() {
     bool playerDead = false; 
@@ -9,6 +10,7 @@ void Game::play() {
      
     while (!playerDead) {
         board.drawBoard();
+
         if (playerDrunk) {
             int num = randInt(10);
                 if (num < 5)
@@ -22,7 +24,7 @@ void Game::play() {
             }
             drunkCounter++;
         }
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)|| sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
 		{
 			if (board.getPlayerPosition() <= 0)
 			{
@@ -32,7 +34,7 @@ void Game::play() {
 			else if (board.getPlayerPosition() <= 2) // case: car in third lane
 				board.setPlayerPosition(1);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)|| sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
 		{
 			if (board.getPlayerPosition() >= 2) // case: car in third lane
 			{
@@ -40,14 +42,17 @@ void Game::play() {
 			else if (board.getPlayerPosition() >= 1) // case: car in second lane
 				board.setPlayerPosition(2);
 			else if (board.getPlayerPosition() >= 0) // case: car in first lane
-				board.setPlayerPosition(0);
+				board.setPlayerPosition(1);
 		}
         board.update();
         if (board.checkStatus() == "Player Dead")
             playerDead = true; 
         if (board.checkStatus() == "Player Drunk")
-            playerDrunk = true; 
+            playerDrunk = true;
+
+		//delay time 
     }
+
     gameOver();
 
 }

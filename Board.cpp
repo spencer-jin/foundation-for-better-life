@@ -1,8 +1,8 @@
 #include "Board.h"
-
+#include <time.h>
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <unistd.h>
+#include <windows.h> // for Sleep function
 
 Board::Board() {
 	// create window to use for graphics
@@ -24,10 +24,16 @@ Board::~Board() {
 void Board::drawBoard() {
 	m_window.clear();
 	
+	// create background
+	sf::RectangleShape background(sf::Vector2f(600, 875)); 
+	sf::Texture backgroundTexture;
+	backgroundTexture.loadFromFile("Road_Background.png");
+	background.setTexture(&backgroundTexture);
+	m_window.draw(background);
+
 	
 	for (int i = 0; i < m_lanes.size(); i++) {
 		for (int j = 0; j < m_lanes[0].size(); j++) {
-			std::cout << i << " " << j << std::endl;
 			m_lanes[i][j]->draw(i, j, m_window);
 		}
 	}
@@ -83,8 +89,8 @@ void Board::gameOver() {
     kentaTexture.loadFromFile("ripKenta.jpeg");
     kenta.setTexture(&kentaTexture);
     m_window.draw(kenta);
-    
-    usleep(30000000);
+	m_window.display();
+	Sleep(5000);
 }
 
 void Board::setPlayerStatus(bool drunk) {
