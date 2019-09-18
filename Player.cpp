@@ -50,8 +50,8 @@ void Player::setGas(int g)
     if(m_gas <= 0)
         m_isDead = true;
     
-    if(m_gas > 25)
-        m_gas = 25;
+    if(m_gas > 250)
+        m_gas = 250;
 }
 
 void Player::setDrunkState(bool d)

@@ -43,22 +43,19 @@ void Board::drawBoard() {
 	sf::Font font;
 	if (!font.loadFromFile("Arbutus-Regular.ttf"))
 		exit(10);
-	//score
-	sf::Text score("Score: " + std::to_string(getScore()), font, 30);
-	score.setPosition(330, 5);
-	m_window.draw(score);
+
+	//distance 
+	sf::Text distance("Distance: " + std::to_string(getDistance()), font, 30);
+	distance.setPosition(330, 5);
+	m_window.draw(distance);
 	//hp
 	sf::Text hp("HP: " + std::to_string(m_player.getHealth()), font, 30); 
 	hp.setPosition(330, 45);
 	m_window.draw(hp);
 
-	//distance 
-	sf::Text distance("Distance: " + std::to_string(getDistance()), font, 30);
-	distance.setPosition(330, 85);
-	m_window.draw(distance);
 	//gas 
 	sf::Text gas("Gas: " + std::to_string(m_player.getGas()), font, 30); 
-	gas.setPosition(330, 125);
+	gas.setPosition(330, 85);
 	m_window.draw(gas);
 	//Drunk / not drunk 
 	std::string drunkStage;
@@ -67,7 +64,7 @@ void Board::drawBoard() {
 	else
 		drunkStage = "Sober";
 	sf::Text drunk(drunkStage, font, 30); // should be get isDrunkStage from player
-	drunk.setPosition(330, 165);
+	drunk.setPosition(330, 125);
 	m_window.draw(drunk);
 
 
