@@ -22,10 +22,16 @@ Board::~Board() {
 void Board::drawBoard() {
 	m_window.clear();
 	
+	// create background
+	sf::RectangleShape background(sf::Vector2f(600, 875)); 
+	sf::Texture backgroundTexture;
+	backgroundTexture.loadFromFile("Road_Background.png");
+	background.setTexture(&backgroundTexture);
+	m_window.draw(background);
+
 	
 	for (int i = 0; i < m_lanes.size(); i++) {
 		for (int j = 0; j < m_lanes[0].size(); j++) {
-			std::cout << i << " " << j << std::endl;
 			m_lanes[i][j]->draw(i, j, m_window);
 		}
 	}
@@ -90,4 +96,8 @@ int Board::getDistance() const {
 
 const std::deque<std::deque<std::shared_ptr<GameObject > > >& Board::getLanes() const {
     return m_lanes;
+}
+
+void Board::drawBackground() {
+	
 }
