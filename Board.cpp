@@ -47,6 +47,14 @@ void Board::setPlayerPosition(int pos) {
     m_playerPosition = pos;
 }
 
+void Board::gameOver() {
+    // display game Over;
+}
+
+void Board::setPlayerStatus(bool drunk) {
+    m_player.setDrunkState(drunk);
+}
+
 int Board::getPlayerPosition() const {
     return m_playerPosition;
 }
