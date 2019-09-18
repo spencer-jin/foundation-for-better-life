@@ -4,7 +4,7 @@
 Player::Player()
 {
     m_health = 25;
-    m_gas = 25;
+    m_gas = 250;
     m_drunkState = false;
     m_isDead = false;
 }

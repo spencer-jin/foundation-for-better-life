@@ -49,6 +49,7 @@ void Board::update() {
         m_lanes[i].pop_back();
     }
     obj->influencePlayer(m_player);
+    m_player.setGas(m_player.getGas()-1);
     m_distance++;
     if (m_distance == 100 || m_distance == 200)
         m_level++;
