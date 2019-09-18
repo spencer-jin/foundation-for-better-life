@@ -14,7 +14,8 @@ public:
     ~Board();
     void drawBoard();
     void update();
-    bool checkStatus();
+    std::string checkStatus();
+    void setPlayerPosition(int pos);
     int getPlayerPosition() const;
     int getScore () const;
     int getDistance () const;

@@ -12,13 +12,10 @@ Board::~Board() {
 void Board::drawBoard() {
     for (int i = 0; i < m_lanes.size(); i++) {
         for (int j = 0; j < m_lanes[0].size(); i++) {
-            m_lanes[i][j]->draw(i,j,m_windows);
+            m_lanes[i][j]->draw(i,j,m_window);
         }
     }
-    m_player->draw(m_playerPosition);
-// each GameObject item needs a draw() function
-// that will tell the board how to draw the item
-// Player class also needs a draw function
+    m_player.draw(m_playerPosition);
 }
 
 void Board::update() {
@@ -35,8 +32,15 @@ void Board::update() {
     m_gameObjectGenerator.feedItem(m_lanes); // change the implementation to passing a pointer to the m_lanes
 }
 
-bool Board::checkStatus() {
-    return true;
+std::string Board::checkStatus() {
+    if(m_player.isDead())
+        return "Player Dead";
+    if(m_player.isDrunk())
+        return "Player Drunk";
+}
+
+void Board::setPlayerPosition(int pos) {
+    m_playerPosition = pos;
 }
 
 int Board::getPlayerPosition() const {
